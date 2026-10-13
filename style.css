@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Outfit:wght@400;500;600&display=swap');
+:root{--bg:#070914;--tx:#eef0ff;--mu:#a3a9c9;--glass:#ffffff0f;--bd:#ffffff22;--c1:#ff4fa3;--c2:#4fd1ff;--c3:#ffd34f;--wa:#1faa59}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Outfit,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}h1,h2,h3{font-family:"Space Grotesk",sans-serif;margin:0;line-height:1.1;letter-spacing:-.02em}
+:focus-visible{outline:3px solid var(--c3);outline-offset:3px}
+#fluid,#math{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#fluid{filter:blur(28px) saturate(1.7);opacity:.85}#math{opacity:.7}
+.wrap{max-width:1120px;margin:auto;padding:0 24px;position:relative;z-index:1}
+header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:#07091488;border-bottom:1px solid var(--bd)}
+header .wrap{height:68px;display:flex;align-items:center;justify-content:space-between}
+.brand{font:700 20px "Space Grotesk";display:flex;align-items:center;gap:10px}
+.brand b{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--c1),var(--c2));display:grid;place-items:center;color:#070914}
+.nav{display:flex;align-items:center;gap:28px;font-weight:500;color:var(--mu)}.nav a:hover{color:#fff}
+.menu-toggle{display:none;border:0;background:none;color:#fff;font-size:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:14px;font-weight:600;border:1px solid var(--bd);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px)}.btn-wa{background:var(--wa);border-color:var(--wa);box-shadow:0 10px 30px #1faa5955}
+.btn-glass{background:var(--glass);backdrop-filter:blur(10px)}.btn-sm{padding:9px 18px;background:#fff;color:#070914}
+.hero{padding:80px 0 90px}.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.badge{display:inline-block;background:linear-gradient(90deg,var(--c1),var(--c3));color:#070914;font-weight:700;font-size:14px;padding:6px 16px;border-radius:99px;margin-bottom:22px}
+h1{font-size:clamp(40px,5.8vw,70px);font-weight:700}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--c1),var(--c3),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;color:var(--mu);max-width:500px;margin:22px 0 30px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+.checks{display:flex;gap:20px;flex-wrap:wrap;list-style:none;padding:0;margin:28px 0 0;font-size:14px;color:var(--mu)}.checks li:before{content:"✓ ";color:var(--c3);font-weight:700}
+.scene{perspective:900px;height:340px;display:grid;place-items:center}
+.cube{width:190px;height:190px;position:relative;transform-style:preserve-3d;animation:spin 18s linear infinite}
+.cube div{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:700 22px "Space Grotesk";background:#ffffff14;border:1px solid #ffffff55;backdrop-filter:blur(6px);box-shadow:inset 0 0 40px #ff4fa333}
+.cube div:nth-child(1){transform:translateZ(95px)}.cube div:nth-child(2){transform:rotateY(180deg) translateZ(95px)}.cube div:nth-child(3){transform:rotateY(90deg) translateZ(95px)}.cube div:nth-child(4){transform:rotateY(-90deg) translateZ(95px)}.cube div:nth-child(5){transform:rotateX(90deg) translateZ(95px)}.cube div:nth-child(6){transform:rotateX(-90deg) translateZ(95px)}
+@keyframes spin{to{transform:rotateX(360deg) rotateY(360deg)}}
+.section{padding:84px 0}.head{max-width:620px;margin-bottom:44px}.head h2{font-size:clamp(32px,4vw,46px)}.head p{color:var(--mu);margin:14px 0 0;font-size:17px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;perspective:1000px}
+.card{background:var(--glass);border:1px solid var(--bd);border-radius:22px;padding:30px;backdrop-filter:blur(16px);display:flex;flex-direction:column;transform-style:preserve-3d;transition:transform .15s;will-change:transform}
+.card.pop{border-color:var(--c3);box-shadow:0 0 50px #ffd34f26}
+.tag{align-self:flex-start;background:var(--c3);color:#070914;font-size:12px;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:12px}
+.card h3{font-size:22px}.price{font:700 38px "Space Grotesk";margin:12px 0 2px}.price s{font-size:18px;color:var(--mu);margin-right:8px}.price small{font:400 14px Outfit;color:var(--mu)}
+.card p{color:var(--mu);margin:0 0 16px;font-size:15px}.card ul{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:8px;font-size:15px}.card li:before{content:"◆ ";color:var(--c2);font-size:11px}
+.card .btn{margin-top:auto}.note{font-size:13px;color:var(--mu);margin-top:22px}
+.art{height:170px;border-radius:14px;margin-bottom:18px;display:grid;place-items:center;font:700 44px "Space Grotesk";color:#070914;transform:translateZ(40px)}
+.a1{background:linear-gradient(135deg,var(--c2),#7b6bff)}.a2{background:linear-gradient(135deg,var(--c1),var(--c3))}.a3{background:linear-gradient(135deg,var(--c3),#5dffb0)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+.step{border-top:2px solid var(--c2);padding-top:16px}.step:before{counter-increment:s;content:counter(s);font:700 30px "Space Grotesk";color:var(--c3)}.step h3{font-size:19px;margin:6px 0}.step p{margin:0;color:var(--mu);font-size:15px}
+.cta{margin:70px auto 90px;text-align:center;border-radius:28px;padding:60px 28px}.cta h2{font-size:clamp(30px,4vw,48px);max-width:640px;margin:0 auto 14px}.cta p{color:var(--mu);max-width:480px;margin:0 auto 26px}
+.row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.social{margin-top:28px}.social a{padding:10px 20px;background:var(--glass);border:1px solid var(--bd);border-radius:99px;font-weight:600;font-size:14px}.social a:hover{background:#fff;color:#070914}
+footer{padding:0 0 34px;color:var(--mu);font-size:14px}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:40;background:var(--wa);padding:13px 20px;border-radius:99px;font-weight:600;box-shadow:0 10px 30px #0006}
+@media(max-width:860px){.hero .wrap,.grid3,.steps{grid-template-columns:1fr}.scene{height:280px}}
+@media(max-width:640px){.menu-toggle{display:block}.nav{display:none;position:absolute;top:68px;left:12px;right:12px;background:#10142a;border:1px solid var(--bd);border-radius:16px;padding:20px;flex-direction:column;align-items:stretch}.nav.open{display:flex}.btn{width:100%}.btn-sm{width:auto}.section{padding:60px 0}}
+@media(prefers-reduced-motion:reduce){.cube{animation:none}*{transition:none!important}}
+
+.who{color:var(--mu);margin:18px 0 0;font-size:15px}
+.frame{position:relative;width:min(330px,82%);aspect-ratio:4/5;transform-style:preserve-3d;transition:transform .15s}
+.ring{position:absolute;inset:-6px;border-radius:999px 999px 34px 34px;overflow:hidden}
+.ring:before{content:"";position:absolute;inset:-50%;background:conic-gradient(var(--c1),var(--c3),var(--c2),var(--c1));animation:rot 7s linear infinite}
+.frame img{position:relative;width:100%;height:100%;object-fit:cover;border-radius:999px 999px 28px 28px;display:block;box-shadow:0 30px 60px #0008}
+.chip{position:absolute;padding:8px 16px;border-radius:12px;background:#10142acc;border:1px solid var(--bd);backdrop-filter:blur(8px);font:700 14px "Space Grotesk";transform:translateZ(70px);animation:fl 4s ease-in-out infinite}
+.chip:nth-of-type(even){animation-delay:-2s}
+@keyframes rot{to{transform:rotate(360deg)}}@keyframes fl{50%{translate:0 -10px}}
+.offer{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--glass);border:1px solid var(--c3);border-radius:18px;padding:14px 20px;margin-bottom:26px;backdrop-filter:blur(14px)}
+.offer[hidden]{display:none}.offer b{margin-right:auto;color:var(--c3)}.offer div{min-width:54px;text-align:center;background:#070914aa;border-radius:10px;padding:6px 8px;font:700 22px "Space Grotesk"}
+.offer div:after{display:block;font:400 10px Outfit;color:var(--mu)}#t-d:after{content:"DAYS"}#t-h:after{content:"HRS"}#t-m:after{content:"MIN"}#t-s:after{content:"SEC"}
+.card .price small{font-size:14px}.proj{flex-direction:row;align-items:center;justify-content:space-between;padding:38px 30px}.proj span{font-size:26px;color:var(--c3)}
+@media(prefers-reduced-motion:reduce){.ring:before,.chip{animation:none}}
+
+
